@@ -26,7 +26,7 @@
 ### 概要
  - 主にオンプレミスのルーター ( 以後 RT ) , スイッチ ( 以後 SW ) の設計・構築業務を２年間担当しています。
  - 全国に支店を展開している企業様のネットワーク設計を行ったことから、<br>IP-VPN をメイン回線、インターネット VPN をバックアップ回線とした拠点のネットワーク設計を担当したいです。
- - また、機会があれば AWS 等のクラウドのインフラを担当したいと考えています。<br>ネットワークの業務経験を武器にして、クラウド案件に参画したいです。
+ - また、機会があれば AWS 等のクラウドのインフラを担当したいと考えています。<br>ネットワークの業務経験を武器にして、クラウド案件に参加できるようにしたいです。
 
 <a id="anchor2"></a>
 
@@ -35,12 +35,12 @@
 |Vender|RT|L3SW|L2SW|Others|
 |---|---|---|---|---|
 |Cisco|ISR4431/K9|WS-C3850-24S|WS-C2960X-48TS-L||
-|Hewlett Packard||Aruba 3810M 16SFP+ 2slot Switch<br>Aruba 2930F 8G PoE+ 2SFP+<br>Aruba 2930F 48G|Aruba 2530 24G||
+|Hewlett Packard||Aruba 3810M<br>Aruba 2930F 8G<br>Aruba 2930F 48G|Aruba 2530 24G||
 |Fujitsu|Si-R G210<br>Si-R G110B<br>Si-R G100B<br>Si-R GX500||SR-X316T2||
 |HCNET||||Account@Adapter+|
 |Apresia||Apresia15000-32XL|Apresia3424GT-SS||
 |Fortinet||||FortiGate-50E<br>FortiGate-100F<br>FortiAP-231F|
-|Soliton||||NetAttest-EPS<br>NetAttest-EPSAP|
+|Soliton||||NetAttest-EPS<br>NetAttest-EPS-ap|
 
 <a id="anchor3"></a>
 
@@ -148,7 +148,7 @@
  - LGWAN を使用しているネットワークに無線 LAN セグメントを導入する案件です。
  - 機器<br>FortiGate-100F , FortiAP-231F , NetAttest-EPS-ST05 , NetAttest-EPSAP-ST05
  - 技術<br>HA , Wireless-controller , RADIUS Authentication , EAP-TLS
- - 人員<br>３名 ( プロパー１名 , 私含め２名 )
+ - 人員<br>３名 ( プロパー１名 , 私 , 他１名 )
 
 #### 担当業務
  - 事前動作確認<br>基本設計の要件を満たすことの動作確認 ( EAP-TLS など )
@@ -174,9 +174,8 @@
 <a id="anchor6"></a>
 
 ## 6. 学習していること
- - Ruby on Rails 6.0
+ - Linux
  - AWS ( EC2 Amazon Linux2 , Infrastructure as code )
- - Docker
 
 <a id="anchor7"></a>
 
