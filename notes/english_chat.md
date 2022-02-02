@@ -187,7 +187,7 @@
 <a id="anchor2c"></a>
 
 ### ～は終わった？ ( Are you done with ? )
- - **done with ~** ： ~ を終える
+ - **done with** ： ~ を終える
 
     ```
     Are you done with reviewing [ my spec? ] ( 仕様書のレビューは終わった？ )
@@ -220,7 +220,7 @@
 <a id="anchor3a"></a>
 
 ### ～でしょ？ ( ~ right ? )
- - **~ right?** , **~ correct?** ：～でしょ？ , ～だよね？
+ - **right?** , **correct?** ：～でしょ？ , ～だよね？
  - **take a note** , **take notes** ：メモを取る
 
     ```
@@ -484,10 +484,10 @@
 
 ### AKA ( Also known as ：～として知られている , 別名～ )
 
-    ```
-    What is he working on now? ( 彼は今何やってるの？ )
-    He's working on a plan to deprecate the system. AKA the Scerlet plan. ( 彼はシステムをリタイアさせる計画を作ってるよ。別名、緋色計画。 )
-    ```
+ ```
+ What is he working on now? ( 彼は今何やってるの？ )
+ He's working on a plan to deprecate the system. AKA the Scerlet plan. ( 彼はシステムをリタイアさせる計画を作ってるよ。別名、緋色計画。 )
+ ```
 
 <a id="anchor11c"></a>
 
