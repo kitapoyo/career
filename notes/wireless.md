@@ -26,6 +26,14 @@
    - TKIP ( Temporal Key Integrity Protocol )
    - CCMP ( Counter mode with Cbc-Mac Protocol )
 6. [WPA ( Wi-Fi Protected Access )](#anchor6)
+   - WPA1 / WPA2
+   - セキュリティ規格の比較
+   - ４ウェイハンドシェイク
+   - ２ウェイハンドシェイク
+7. [IEEE802.1x](#anchor7)
+   - 認証までの順序
+   - 認証方式
+
 
 <a id="anchor1"></a>
 
