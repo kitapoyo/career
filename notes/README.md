@@ -22,3 +22,4 @@
 |SCM ( Source Code Management )|scm_github_commands.md<br>scm_github_note.md|Github commands<br>Github ( Git Bash ) |
 |VScode|vscode_keyboard.md<br>vscode_extended_function.md|Keyboard Shortcuts<br>Extended Function|
 |English|english_chat.md<br>english_verb.md|Chat<br>Verb|
+|Raspberry Pi|raspberrypi.md|Raspberry Pi Install|
