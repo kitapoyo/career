@@ -30,11 +30,11 @@
 ### 第２文型の動詞
  - be ： ` John is a doctor. `
  - become ： ` John became happy. `
- - remain ： ` John and Ken remained good friends. `
+ - remain ： ` John and Alice remained good friends. `
  - stay ： ` John stay silent. `
  - appear , seem ( to be )： ` He seems to be a nice guy. `
  - look , sound , smell , taste , feel<br>` John looks happy. `<br>` John sounds sad. `<br>` The milk smells strange. `<br>` The milk tastes sour. `<br>` Silk feels soft. `
- - get , turn , grow<br>` John got sad. `<br>` The leaves turned yellow. `<br>` Ken grew tall. `
+ - get , turn , grow<br>` John got sad. `<br>` The leaves turned yellow. `<br>` Alice grew tall. `
  - come , go , fall<br>` My dream came true. `<br>` The coffie went sour. `<br>` John fell asleep. `
 
 ## 第３文型 ( S + V + O )
@@ -63,8 +63,8 @@
 ### 第５文型の動詞
 
 #### C が名詞
- - name ： ` Ken calls his dog John. `
- - call ： ` Ken left the door closed. `
+ - name ： ` Alice calls his dog John. `
+ - call ： ` Alice left the door closed. `
 
 #### C が形容詞
  - find ： ` I found the story true. `
@@ -109,7 +109,7 @@
 
 ### rent
  - **お金を払って借りる**<br>` We rented a car. `
- - **お金をもらって貸す**<br>` We rent out a room to Ken. `
+ - **お金をもらって貸す**<br>` We rent out a room to Alice. `
  - 名詞で **家賃** という意味
 
 ### talk
@@ -125,7 +125,7 @@
 ### tell
  - **tell O1 O2** ： ` I'll tell you everyting. `
  - O2 の位置に it は 置けない ： ` I'll tell it to you. `
- - tell はもともと **数える** という意味から **違いを分ける** という意味がある。<br>` I'll can't tell John from Ken. `
+ - tell はもともと **数える** という意味から **違いを分ける** という意味がある。<br>` I'll can't tell John from Alice. `
 
 ### open , closed
  - **形容詞** で動詞ではない。
