@@ -129,5 +129,5 @@
 
 ### open , closed
  - **形容詞** で動詞ではない。
- - **空いている** ： ` I kept the dor open. `
+ - **空いている** ： ` I kept the door open. `
  - **閉まっている** ： ` I kept the door closed. `
