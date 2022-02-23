@@ -21,7 +21,6 @@
 |Nowadays|2022 01|
 |Name|北野 泰隆 ( Kitano Yasutaka )|
 |Age|29 ( 1992 02 ) |
-|Mail|arataka4215@gmail.com|
 
 ### 概要
  - 主にオンプレミスのルーター ( 以後 RT ) , スイッチ ( 以後 SW ) の設計・構築業務を２年間担当しています。
