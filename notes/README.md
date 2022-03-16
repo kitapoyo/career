@@ -4,6 +4,14 @@
  - 個人で使用するための備忘録です。
  - 使用は自己責任でお願いします。
 
+    ```
+    As you can see, it's up to you to collect the poor little stars.
+    If you don't do it, it just disappears.
+    Whenever I use a method, something comes back.
+    You can ignore it or use it.
+    When you can use the answer that the method returns, you can dominate.
+    ```
+
 ## Folder
 
 |Item|Folder name|Description|
