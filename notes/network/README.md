@@ -12,3 +12,4 @@
 |Furukawa|Furukawa RT GX500 Note|**furukawa_gx500_note.md**||
 |HCNET|Account@Adapter+ Note|**account@adapter+_note.md**||
 |Wireless||**wireless.md**||
+|Other|SNMP|**snmp_trap_md**|Trap OID|
