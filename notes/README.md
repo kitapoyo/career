@@ -25,9 +25,10 @@
 
 |Item|File name|Description|
 |---|---|---|
+|Architecture|architecture_definition.md|Requirements|
 |Back end|back_python_note.md<br>back_rails6_rspec.md<br>back_ruby_note.md<br>back_sql_note.md|Python ( pip )<br>Rails6 RSpec ( example , Factory Bot )<br>Ruby ( Gem , Bundler )<br>SQL|
+|English|english_chat.md<br>english_verb.md|Chat<br>Verb|
 |Front end|front_css_note.md<br>front_html_note.md<br>front_javascript_note.md|CSS<br>HTML<br>JavaScript ( API , yarn , JQuery )|
+|Raspberry Pi|raspberrypi.md|Raspberry Pi Install|
 |SCM ( Source Code Management )|scm_github_commands.md<br>scm_github_note.md|Github commands<br>Github ( Git Bash ) |
 |VScode|vscode_keyboard.md<br>vscode_extended_function.md|Keyboard Shortcuts<br>Extended Function|
-|English|english_chat.md<br>english_verb.md|Chat<br>Verb|
-|Raspberry Pi|raspberrypi.md|Raspberry Pi Install|
