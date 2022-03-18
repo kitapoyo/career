@@ -1,15 +1,33 @@
 # Raspberry Pi 4
+1. [README](#anchor1)
+2. [Base](#anchor2)
+3. [SNMP Trap](#anchor3)
+4. [FTP](#anchor4)
+5. [TFTP](#anchor5)
+6. [Ruby](#anchor6)
+7. [Apache2](#anchor7)
+8. [Nginx](#anchor8)
+9. [SMTP](#anchor9)
+10. [DNS](#anchor10)
+11. [LDAP](#anchor11)
+12. [Proxy](#anchor12)
+
+<a id="anchor1"></a>
+
+## README
  - Raspberry Pi Imager
  - VNC Viewer
  - OS 32 bit
     ```
     Distributor ID: Raspbian
-    Description:    Raspbian GNU/Linux 11 (bullseye)
-    Release:        11
-    Codename:       bullseye
+    Description: Raspbian GNU/Linux 11 (bullseye)
+    Release: 11
+    Codename: bullseye
     ```
 
-## Set
+<a id="anchor2"></a>
+
+## Base
 
 ### Root
  ```
@@ -25,7 +43,7 @@
 ### tools
  ```
  sudo apt -y update && sudo apt -y upgrade
- sudo apt -y install vim xinetd telnetd traceroute hping3 nmap tcpdump wireshark snmp snmpd dnsutils
+ sudo apt -y install vim xinetd telnetd traceroute hping3 nmap tcpdump wireshark snmp snmpd dnsutils ufw
  sudo usermod -a -G wireshark $USER
  ```
 
@@ -62,6 +80,8 @@
     Acquire::http::Proxy "http://username:password@proxy:port";
     Acquire::https::Proxy "https://username:password@proxy:port";
     ```
+
+<a id="anchor3"></a>
 
 ## SNMP Trap
 
@@ -108,6 +128,8 @@
 2. ` sudo systemctl restart smbd nmbd `
 3. ` \\RASPBERRYPI\$USER `
 
+<a id="anchor4"></a>
+
 ## FTP
 
 ### install
@@ -123,6 +145,8 @@
     ascii_upload_enable=YES
     ascii_download_enable=YES
     ```
+
+<a id="anchor5"></a>
 
 ## TFTP
 
@@ -140,6 +164,8 @@
     TFTP_ADDRESS=":69"
     TFTP_OPTIONS="--secure --create"
     ```
+
+<a id="anchor6"></a>
 
 ## Ruby
 
@@ -169,6 +195,8 @@
     gem update --system && gem --version
     ```
 
+<a id="anchor7"></a>
+
 ## Apache2
 
 ### install
@@ -180,6 +208,8 @@
  - ` sudo ls /etc/apache2/ `
  - ` sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.original `
  - Pass ： ` sudo ls /var/www/html/ `
+
+<a id="anchor8"></a>
 
 ## Nginx
 
@@ -199,7 +229,9 @@
     sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.original
  - Check ： ` sudo nginx -t `
 
-## Postfix ( SMTP )
+<a id="anchor9"></a>
+
+## SMTP
  - log ： ` /var/log/mail.log `
 
 ### install
@@ -212,7 +244,7 @@
  sudo dpkg-reconfigure postfix
  ```
 1. mode ： ` Internet Site `
-2. domain ： ` raspberrypi.flets-east.jp ` ( pi@raspberrypi.flets-east.jp )
+2. domain ： ` raspberrypi.flets-east.jp ` ( pi @ raspberrypi.flets-east.jp )
 3. admin mail address ： ` root@raspberrypi.flets-east.jp `
 4. update sync ： ` No `
 5. local address ： default
@@ -250,7 +282,9 @@
     submission inet n       -       y       -       -       smtpd
     ```
 
-## BIND9 ( DNS )
+<a id="anchor10"></a>
+
+## DNS
 
 ### install
  ```
@@ -259,9 +293,89 @@
 
 ### config ( /etc/bind/named.conf )
  - cache server ： ` /etc/bind/named.conf.options `
+    - ` sudo cp /etc/bind/named.conf.options /etc/bind/named.conf.options.original `
     ```
     forwarders { 8.8.8.8; 8.8.4.4; };
     allow-query { localhost; };
     ```
  - ` /etc/bind/named.conf.local `
  - ` /etc/bind/named.conf.default-zones `
+
+<a id="anchor11"></a>
+
+## LDAP
+
+### install
+ ```
+ sudo apt -y install slapd ldap-utils
+ ```
+
+### config
+ - ` sudo dpkg-reconfigure slapd `
+    ```
+    pi.raspberry.com
+    dc=pi,dc=raspberry,dc=com
+    ```
+
+### ldapadd
+ - ` sudo vim ~/pi.ldif `
+    ```
+    dn: ou=Users,dc=pi,dc=raspberry,dc=com
+    objectClass: organizationalUnit
+    ou: Users
+
+    dn: ou=Groups,dc=pi,dc=raspberry,dc=com
+    objectClass: organizationalUnit
+    ou: Groups
+
+    dn: cn=ubuntu,ou=Groups,dc=pi,dc=raspberry,dc=com
+    objectClass: posixGroup
+    cn: ubuntu
+    gidNumber: 5000
+
+    dn: uid=scarlet,ou=Users,dc=pi,dc=raspberry,dc=com
+    objectClass: inetOrgPerson
+    objectClass: posixAccount
+    objectClass: shadowAccount
+    uid: scarlet
+    sn: Evergarden
+    givenName: Scarlet
+    cn: Scarlet Evergarden
+    displayName: Scarlet Evergarden
+    uidNumber: 5000
+    gidNumber: 5000
+    userPassword: scarlet
+    gecos: Scarlet Evergarden
+    loginShell: /bin/bash
+    homeDirectory: /home/pi
+    ```
+ - ` ldapadd -x -D cn=admin,dc=pi,dc=raspberry,dc=com -W -f ~/pi.ldif `
+ - ` sudo slapcat `
+
+### search
+ - ` ldapsearch -x -LLL -b dc=pi,dc=raspberry,dc=com 'uid=scarlet' `
+ - ` ldapsearch -x -LLL -b dc=pi,dc=raspberry,dc=com 'uid=scarlet' givenName`
+
+### client
+ ```
+ sudo apt -y install libpam-ldap libnss-ldap
+ ```
+ - ` sudo dpkg-reconfigure ldap-auth-config `
+
+<a id="anchor12"></a>
+
+## Proxy
+ - ` cat /var/log/squid/access.log `
+ - ` /etc/squid/blacklist `
+
+### install
+ ```
+ sudo apt -y install squid
+ sudo cp /etc/squid/squid.conf /etc/squid/squid.conf.original
+ ```
+
+### config
+ - ` sudo vim /etc/squid/squid.conf `
+    ```
+    http_port 8080
+    ```
