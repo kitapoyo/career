@@ -48,8 +48,8 @@
 |ベンダー|技術|
 |---|---|
 |Cisco|BGP, RIP, HSRP, Route-Map<br>Rapid-PVST+, RADIUS Mac Base Authentication ( Account@Adapter+ ), UDLD|
-|Hewlett Packard|Policy Base Routing, VRRP<br>VSF ( Virtual Switching Framework ), LAC ( Link Aggregation ), Rapid-PVST+, MSTP<br>Fault-finder ( Storm Control ), Loop-protection<br>RADIUS Mac Base Authentication ( Account@Adapter+ ), Link-keepalive ( UDLD )<br>Aruba Central|
-|Fujitsu|BGP, RIP, NAPT, IPsec, Ether IP Tunnel, PPPoE|
+|Hewlett Packard|Policy Base Routing, VRRP<br>VSF ( Virtual Switching Framework ), LAC ( Link Aggregation ), Rapid-PVST+, MSTP<br>Fault-finder ( Storm Control ), Loop-protection<br>RADIUS Mac Address Based Authentication ( Account@Adapter+ ), Link-keepalive ( UDLD )<br>Aruba Central|
+|Fujitsu|BGP, RIP, NAPT, IPsec, Ether IP Tunnel|
 |Fortinet|HA, Wireless-controller Bridge-mode, RADIUS Authentication, WPA2-Enterprise|
 |Soliton|EAP-TLS|
 |Others|GitHub Enterprise<br>Virtual Box<br>Lubuntu 18.04, 20.04<br>Ruby 3.0.1<br>Python 3.9.1|
@@ -81,7 +81,7 @@
 ### 新規事務所ネットワークの構築 ( 2020/07 ~ 2020/12 )
  |プロジェクトと担当業務|内容|
  |---|---|
- |プロジェクト概要|L2SW 10台, 無線アクセスポイント ( 以後 AP ) 15台規模の新規事務所ネットワーク構築<br>期間：5ヶ月<br>機器：Aruba 2930F 8G PoE+ 2SFP+, Aruba 2930F 48G, Aruba 2530 24G, Account@Adapter+<br>技術：VSF, Policy Base Routing, Loop-protection, LAC, RADIUS Mac Base Autentication, Aruba Central<br>人員：２名 ( プロパー１名, 本人 )
+ |プロジェクト概要|L2SW 10台, 無線アクセスポイント ( 以後 AP ) 15台規模の新規事務所ネットワーク構築<br>期間：5ヶ月<br>機器：Aruba 2930F 8G PoE+ 2SFP+, Aruba 2930F 48G, Aruba 2530 24G, Account@Adapter+<br>技術：VSF, Policy Base Routing, Loop-protection, LAC, RADIUS Authentication, Aruba Central<br>人員：２名 ( プロパー１名, 本人 )
  |基本設計|既存環境と新規ネットワークに接続するための Policy Base Routing 設計<br>VSF ( スタック ) を使用したネットワーク設計書の作成|
  |コンフィグ作成|各機器のコンフィグ作成
  |場内テスト|単体試験書作成及び実施<br>結合試験書作成及び試験環境の構築と結合試験の実施<br>Lubuntu の試験環境設定 ( SNMP, Proxy, PPPoE, DNS, NAT )|
@@ -94,7 +94,7 @@
 ### 新規拠点ネットワークの構築 ( 2020/09 ~ 2020/12 )
  |プロジェクトと担当業務|内容|
  |---|---|
- |プロジェクト概要|RT 2台の新規拠点ネットワークの構築<br>期間：3ヶ月<br>機器：Si-R G210<br>技術：BGP, Mac Base Authentication, VRRP<br>人員：２名 ( プロパー１名, 本人 )|
+ |プロジェクト概要|RT 2台の新規拠点ネットワークの構築<br>期間：3ヶ月<br>機器：Si-R G210<br>技術：BGP, RADIUS Authentication, VRRP<br>人員：２名 ( プロパー１名, 本人 )|
  |コンフィグ作成|各機器のコンフィグ作成|
  |場内テスト|単体試験書作成及び実施<br>結合試験書作成及び試験環境の構築と結合試験の実施|
  |展開作業|ネットワーク機器のインストール・キッティング<br>ロット展開のコンフィグ作成ツールを Python３ で作成|
@@ -105,7 +105,7 @@
 ### 拠点ネットワーク機器のリプレース ( 2021/01 ~ 2021/12 )
  |プロジェクトと担当業務|内容|
  |---|---|
- |プロジェクト概要|エンドオブサービスによる機器の代わりに Aruba 機器で既存の拠点ネットワークの構築<br>期間：１年<br>機器：Aruba 3810M 16SFP+ 2slot, Aruba 2930F 48G, Aruba 2530 24G<br>技術：VRRP, Rapid-PVST+, MSTP, Fault-finder, Loop-protection, LAC, RADIUS Mac Base Authentication<br>人員：５名 ( プロパー1名, 本人, 展開チーム3名 )
+ |プロジェクト概要|Aruba 機器で既存の拠点ネットワークの構築<br>期間：１年<br>機器：Aruba 3810M 16SFP+ 2slot, Aruba 2930F 48G, Aruba 2530 24G<br>技術：VRRP, Rapid-PVST+, MSTP, Fault-finder, Loop-protection, LAC, RADIUS Authentication<br>人員：５名 ( プロパー1名, 本人, 展開チーム3名 )
  |基本設計|既存環境の際に発覚した問題点の洗い出しと対策の調査<br>ベンダー独自の仕様や処理性能の調査<br>既存の踏襲と追加要件を考慮したアクセスリストの設計書作成|
  |コンフィグ作成|各機器のコンフィグ作成<br>既存のアクセスリストを導入機器に移植できるコンバートツールを Ruby で作成<br>コンフィグ作成ツールを Python３ で作成|
  |場内テスト|単体試験書作成及び実施<br>結合試験書作成及び試験環境の構築と結合試験の実施|
@@ -128,9 +128,9 @@
 ### その他業務
 |概要|内容|
 |---|---|
-|ネットワーク経路のリプレース|別拠点にサーバーを移行するための経路設計|
+|ルーティング経路のリプレース|別拠点にサーバーを移行する経路設計|
 |本社 RT のリプレース|Cisco ISR での BGP 経路設計|
-|拠点ネットワーク構築|メインを IP-VPN, バックアップをインターネット VPN とした拠点ネットワーク構築|
+|拠点ネットワーク構築|IP-VPN, インターネット VPN とした拠点ネットワーク構築|
 |既存拠点の新規セグメント追加|ルーティングテーブルとアクセスリストの設計|
 
 <a id="anchor5"></a>
