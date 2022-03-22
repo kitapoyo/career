@@ -1,8 +1,7 @@
 # Notes
 
 ## README
- - 個人で使用するための備忘録です。
- - 使用は自己責任でお願いします。
+ - Use it at your own risk.
 
     ```
     As you can see, it's up to you to collect the poor little stars.
