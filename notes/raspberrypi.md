@@ -11,6 +11,7 @@
 10. [DNS](#anchor10)
 11. [LDAP](#anchor11)
 12. [Proxy](#anchor12)
+13. [JDK](#anchor13)
 
 <a id="anchor1"></a>
 
@@ -379,3 +380,8 @@
     ```
     http_port 8080
     ```
+
+<a id="anchor13"></a>
+
+## JDK ( Java Development Kit )
+ - ` sudo apt -y install default-jdk-headless `
